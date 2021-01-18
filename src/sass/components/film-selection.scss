@@ -1,0 +1,45 @@
+.c-film-selection {
+	&__heading {
+	    font-size: 19px;
+	    font-family: 'Crimson Text';
+	    font-weight: 400;
+	    margin-top: 16px;
+	}
+
+	&__item {
+	    display: flex;
+	    position: relative;
+	    max-width: 375px;
+	}
+
+	&__image {
+	    width: 100px;
+	    height: 150px;
+	    background: center / cover url();
+	    filter: grayscale(1);
+	    margin-right: 20px;
+	    display: inline-block;
+	}
+
+	&__title {
+	    font-family: 'Crimson Text';
+	    font-weight: 400;
+	    display: inline-block;
+	    margin-top: 0;
+	    margin-bottom: 12px;
+	}
+
+	&__meta-text {
+	    display: block;
+	    font-size: 13px;
+	    text-align: left;
+	    letter-spacing: -0.5px;
+	    color: #1d1d1d;
+	}
+
+	&__delete {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	}
+}

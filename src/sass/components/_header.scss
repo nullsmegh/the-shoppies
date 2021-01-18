@@ -1,0 +1,18 @@
+.c-header {
+	
+	padding: 1rem 0 3rem;
+
+	&__logo {
+		display: block;
+		margin-bottom: 0.333rem;
+		font-size: 28px;
+		font-family: $theme-secondary-font;
+		color: $theme-primary-color;
+		text-decoration: none;
+		font-weight: 500;
+
+		@include respond-above(md) {
+			font-size: 28px;
+		}
+	}
+}

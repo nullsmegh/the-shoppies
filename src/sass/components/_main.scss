@@ -1,0 +1,17 @@
+.c-main {
+
+	&__grid {
+		display: flex;
+	}
+	&__left {
+		width: 60%;
+		margin-right: 3rem;
+	}
+	&__right {
+		flex-grow: 1;
+	}
+	&__paper {
+		background-color: $theme-accent-color;
+		height: 100vh !important;
+	}
+}

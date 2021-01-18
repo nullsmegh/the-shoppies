@@ -1,0 +1,31 @@
+.c-films {
+
+	margin-top: 22px;
+
+	&__sub-heading {
+		margin: 0 0 10px;
+		font-size: 13.4px;
+		text-transform: uppercase;
+		color: #3e3e3e;
+		font-weight: 500;
+	}
+
+	&__grid {
+		border: $theme-primary-color solid 1px;
+	}
+
+	&__row {
+		display: flex;
+		&:not(:last-child) {
+			border-bottom: $theme-primary-color solid 1px;
+		}
+	}
+
+	&__col {
+		flex:1 0 33.333%;
+		min-height: 300px;
+		&:not(:last-child) {
+			border-right: $theme-primary-color solid 1px;
+		}
+	}
+}
