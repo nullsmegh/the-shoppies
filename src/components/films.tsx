@@ -1,7 +1,11 @@
-import React from "react";
-import { FilmCard } from "./film-card"; 
+import React, { useEffect } from 'react';
+import { FilmCard } from "components/film-card"; 
+import { getFilm } from "api/FilmService";
 
 export const Films = (): JSX.Element => {
+    useEffect(() => {
+      getFilm('tt7126948').subscribe(r => console.log(r));
+    });
     return (
         <div className="o-section">
             <div className="c-films">

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import { Film } from "constants/FilmInterface"
+import { getFilm } from "api/FilmService";
 
 export const FilmCard = (): JSX.Element => {
     return (

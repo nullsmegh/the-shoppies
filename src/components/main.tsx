@@ -3,7 +3,6 @@ import Container from "@material-ui/core/Container";
 import { Search } from "./search";
 import { Films } from "./films";
 import { FilmSelection } from "./film-selection";
-import { Heading } from "./heading";
 
 export const Main = (): JSX.Element => {
     return (
@@ -12,7 +11,7 @@ export const Main = (): JSX.Element => {
             <div className="c-main__grid">
             <div className="c-main__left">
                 <Search />
-                <Films/>
+                <Films />
             </div>
             <div className="c-main__right">
                 <FilmSelection />
