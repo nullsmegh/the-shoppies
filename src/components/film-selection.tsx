@@ -1,5 +1,4 @@
 import React from "react";
-import { Film } from "constants/FilmInterface"
 import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
 
 export const FilmSelection = (): JSX.Element => {

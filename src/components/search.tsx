@@ -1,16 +1,20 @@
 import React from "react";
 import SearchIcon from '../assets/icons/search.svg';
 import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
+import { map, filter, debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { SvgIcon } from '@material-ui/core';
 
-export const Search = (): JSX.Element => {
+export const Search = (props: any): JSX.Element => {
 
 	const [isFocused, setIsFocused] = React.useState(false);
 	const [inputValue, setInputValue] = React.useState("");
 
 	const onFocus = () => setIsFocused(true);
 	const onBlur = () => setIsFocused(false);
-	const onChange = (event: React.ChangeEvent<HTMLInputElement>) => (value => setInputValue(value))(event.target.value);
+	const onChange = (event: React.ChangeEvent<HTMLInputElement>) => (value => {
+        setInputValue(value);
+        props.onSearchInput(value);
+    })(event.target.value);
 	const clearInput = () => setInputValue("");
     return (
         <div className={"c-search " + (isFocused ? 'c-search--focused ' : '') + (inputValue ? 'c-search--active ' : '') }>
