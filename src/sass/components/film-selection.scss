@@ -1,15 +1,19 @@
 .c-film-selection {
 	&__heading {
-	    font-size: 19px;
-	    font-family: 'Crimson Text';
+	    font-size: 20.4px;
+	    font-family: $theme-secondary-font;
 	    font-weight: 400;
-	    margin-top: 16px;
+	    margin-top: 13px;
 	}
 
 	&__item {
 	    display: flex;
 	    position: relative;
 	    max-width: 375px;
+	    margin-top: 12px;
+	    &:first-of-type {
+	    	margin-top: 0;
+	    }
 	}
 
 	&__image {

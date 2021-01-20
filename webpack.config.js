@@ -54,14 +54,13 @@ module.exports = (env, options) => {
       ],
     },
     devServer: {
-      contentBase: path.resolve(__dirname, "dist"),
+      contentBase: path.resolve(__dirname, ""),
       port: 3000,
     },
     plugins: [
       new MiniCssExtractPlugin({ filename: "css/[name].css" }),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "public", "index.html"),
-        filename: (__dirname, "../index.html"),
       }),
       new ESLintPlugin({ extensions: ["js", "ts", "tsx"] }),
     ],
