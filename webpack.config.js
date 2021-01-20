@@ -61,6 +61,7 @@ module.exports = (env, options) => {
       new MiniCssExtractPlugin({ filename: "css/[name].css" }),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "public", "index.html"),
+        filename: (__dirname, "../index.html"),
       }),
       new ESLintPlugin({ extensions: ["js", "ts", "tsx"] }),
     ],
