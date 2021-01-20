@@ -52,10 +52,18 @@
 		color: $theme-primary-color;
 		text-transform: uppercase;
 		text-decoration: none;
+		transition:0.2s ease opacity;
 	}
 
 	&:hover &__image {
 		filter: grayscale(0) brightness(1.25) contrast(1);
 		transition: 0.2s ease-out filter;
+	}
+
+	&--selected {
+		.c-film-card__button {
+			opacity: 0.5;
+			pointer-events: none;
+		}
 	}
 }

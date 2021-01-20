@@ -66,7 +66,7 @@ export const Main = (): JSX.Element => {
         <div className="c-main__grid">
           <div className="c-main__left">
             <Search onSearchInput={handleSearchInput} />
-            <Films films={films} searchQuery={searchQuery} handleFilmSelection={handleFilmSelection} />
+            <Films storedFilms={storedFilms} films={films} searchQuery={searchQuery} handleFilmSelection={handleFilmSelection} />
           </div>
           <div className="c-main__right">
             <FilmSelection storedFilms={storedFilms} removeFilm={handleRemoveFilm} />

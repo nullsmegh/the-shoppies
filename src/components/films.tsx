@@ -4,7 +4,7 @@ import { getFilm } from "api/FilmService";
 
 export const Films = (props: any): JSX.Element => {
 
-    const handleOnSelection  = (event: any, film: any) => {
+    const handleOnSelection  = (event: any, film: any, storedFilms: any) => {
         props.handleFilmSelection(event, film);
     }
 
@@ -13,7 +13,7 @@ export const Films = (props: any): JSX.Element => {
             <h4 className="c-films__sub-heading">{props.searchQuery}</h4>
             <div className="c-films__grid">
             {
-                props.films.map((film: any) => <div className="c-films__col"  key={film.imdbID}> <FilmCard film={film} onSelection={handleOnSelection} /> </div>)
+                props.films.map((film: any) => <div className="c-films__col"  key={film.imdbID}> <FilmCard film={film} storedFilms={props.storedFilms} onSelection={handleOnSelection} /> </div>)
             }
             <div className="c-films__empty"></div>
             <div className="c-films__empty"></div>
