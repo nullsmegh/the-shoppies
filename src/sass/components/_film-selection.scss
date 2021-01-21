@@ -1,6 +1,6 @@
 .c-film-selection {
 	&__heading {
-	    font-size: 20.4px;
+	    font-size: 21.4px;
 	    font-family: $theme-secondary-font;
 	    font-weight: 400;
 	    margin-top: 13px;
@@ -43,7 +43,28 @@
 
 	&__delete {
 	    position: absolute;
-	    top: 1px;
+	    top: 1px ;
 	    right: 0;
+	}
+
+	&__placeholder {
+		margin-top: 112px;
+	}
+
+	&__popcorn {
+		display: block;
+		width: 48px;
+		height: 48px;
+		margin: auto;
+	}
+
+	&__placeholder-text {
+		width: 400px;
+		margin: 10px auto 0;
+		font-size: 15px;
+		font-family: $theme-primary-font;
+		font-weight: 400;
+		color: $theme-primary-color;
+		text-align: center;
 	}
 }
