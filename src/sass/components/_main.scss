@@ -2,8 +2,11 @@
 
 	&__grid {
 		display: flex;
+		height: calc(100vh - 109.11px);
 	}
 	&__left {
+		display: flex;
+		flex-flow: column;
 		width: 60%;
 		margin-right: 3rem;
 	}

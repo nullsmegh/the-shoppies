@@ -8,9 +8,10 @@ export const FilmSelection = (props: any): JSX.Element => {
         <div className="c-film-selection" >
             <div className="c-film-selection__container">
                 <h2 className="c-film-selection__heading">Your Nominations</h2>
+                { props.storedFilms.length ? (
+                <>
                 <div className="c-film-selection__items">
-                {   props.storedFilms.map((film: any, index: any) => 
-                        
+                { props.storedFilms.map((film: any, index: any) => 
                             <div className="c-film-selection__item" key={film.imdbID}>
                                 <div className="c-film-selection__image" style={{backgroundImage: `url(${film.Poster})`}}></div>
                                 <div className="c-film-selection__wrapper">
@@ -22,6 +23,9 @@ export const FilmSelection = (props: any): JSX.Element => {
                     )
                 }
                 </div>
+                <a href="#" className={"c-film-selection__submit " + (props.storedFilms.length === 5 ? '' : 'c-film-selection__submit--disabled')}> Submit Nominations</a>
+                </>
+                ) : '' }
                 { !props.storedFilms.length ? (
                 <div className="c-film-selection__placeholder">
                     <SvgIcon component={PopcornIcon} className="c-film-selection__popcorn" color="primary" viewBox="0 0 512 512" /> 

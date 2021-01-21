@@ -54,7 +54,9 @@ export const Main = (): JSX.Element => {
   const handleFilmSelection = (event: any, film: OMDBFilm) => {
       event.nativeEvent.preventDefault();
       if(storedFilms.length < 5) {
-          setStoredFilms([...storedFilms, film]);
+          setStoredFilms([film, ...storedFilms]);
+      } else {
+          setStoredFilms([film, ...storedFilms.slice(0, -1)]);
       }
   }
 

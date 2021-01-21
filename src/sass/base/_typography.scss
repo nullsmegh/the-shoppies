@@ -3,4 +3,9 @@ body {
 	font-size: 16px;
 	font-family: Work Sans;
 	background-color: $theme-accent-color;
+
+
+	::-webkit-scrollbar {
+		width: 0;
+	}
 }

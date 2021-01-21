@@ -1,7 +1,10 @@
 .c-films {
 
+	display: flex;
+	flex-flow: column;
 	margin-top: 22px;
-
+	overflow: hidden;
+	
 	&__sub-heading {
 		margin: 0 0 10px;
 		font-size: 13.4px;
@@ -15,6 +18,7 @@
 		flex-flow: row wrap;
 		border: $theme-primary-color solid 1px;
 		border-bottom: none;
+		overflow: auto;
 	}
 
 	&__col {
