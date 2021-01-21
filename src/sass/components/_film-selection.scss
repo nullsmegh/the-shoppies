@@ -9,7 +9,7 @@
 	&__item {
 	    display: flex;
 	    position: relative;
-	    max-width: 375px;
+	    max-width: 425px;
 	    margin-top: 12px;
 	    &:first-of-type {
 	    	margin-top: 0;
@@ -43,7 +43,7 @@
 
 	&__delete {
 	    position: absolute;
-	    top: 0;
+	    top: 1px;
 	    right: 0;
 	}
 }

@@ -53,13 +53,16 @@ export const Main = (): JSX.Element => {
 
   const handleFilmSelection = (event: any, film: OMDBFilm) => {
       event.nativeEvent.preventDefault();
-      setStoredFilms([...storedFilms, film]);
+      if(storedFilms.length < 5) {
+          setStoredFilms([...storedFilms, film]);
+      }
   }
 
   const handleRemoveFilm = (film: OMDBFilm, index: any) => {
       const updatedList = storedFilms.filter((storedFilm:any) => storedFilm.imdbID !== film.imdbID);
       setStoredFilms(updatedList);
   }
+
   return (
     <main className="c-main">
       <Container maxWidth="lg">
