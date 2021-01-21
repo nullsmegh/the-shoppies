@@ -99,6 +99,7 @@
 
 	    &--close {
 	    	width: 155px;
+	    	margin-top: 38px;
 	    }
 	}
 
@@ -127,8 +128,9 @@
 	}
 
     &__modal-container {
+    	width: 1100px;
 	    margin-top: -2rem;
-	    padding: 50px 45px 25px;
+	    padding: 125px 35px 50px;
 	    border: #1d1d1d solid 1px;
 	    box-sizing: border-box;
 	    background: $theme-accent-color;
@@ -136,7 +138,8 @@
     }
 
     &__modal-text {
-    	margin-top: 24px;
+    	margin-top: 36px;
+    	font-size: 21px;
     }
 
 	@keyframes fadeIn {
