@@ -42,17 +42,44 @@
 	}
 
 	&__button {
+		position: relative;
 		display: inline-block;
 		margin-top: auto;
 		padding: 9px 23px;
 		border: solid 1px $theme-primary-color;
+		overflow: hidden;
 		font-size: 13px;
 		font-family: $theme-secondary-font;
 		letter-spacing: -0.01ch;
 		color: $theme-primary-color;
 		text-transform: uppercase;
 		text-decoration: none;
-		transition:0.2s ease opacity;
+		transition:0.2s ease opacity, 0.2s 0.2s ease color;
+
+		&:after {
+		    content: "";
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    height: 200px;
+		    width: 120px;
+		    background-color: #1d1d1d;
+		    transform: translate(89px, -6px) rotate(45deg);
+		    z-index: -1;
+		    -webkit-transition: 0.325s ease-in-out transform;
+		    transition: 0.325s ease-in-out width, 0.325s ease-in-out position;
+		}
+
+		&:hover {
+			color: #f0f0f0;
+		}
+
+		&:hover:after {
+    		left: 0;
+			width: 250px;
+    		height: 220px;
+    		transform: translate(-110px, -149px) rotate(45deg);
+		}
 	}
 
 	&:hover &__image {
